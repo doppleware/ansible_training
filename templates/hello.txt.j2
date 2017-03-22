@@ -1,0 +1,5 @@
+{% for hello_message in hello_messages %}
+hello {{hello_message}} {{ansible_hostname}}
+{% endfor %}
+To do today:
+{{to_do_list | to_nice_json }}

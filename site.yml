@@ -1,7 +1,15 @@
 - hosts: all
+  vars:
+    to_do_list:
+        - develop
+        - test
+        - deploy
+        - take over world
+    hello_messages:
+        - "world"
+        - "wow"
   tasks:
     - name: print meaningless text
-      blockinfile:
+      template:
         dest: "~/hello.txt"
-        content: "hello world"
-        create: yes
+        src: "templates/hello.txt.j2"
