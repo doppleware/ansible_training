@@ -1,1 +1,2 @@
-localhost ansible_port=32768 ansible_host=127.0.0.1 ansible_user=root ansible_password=screencast
+node1 ansible_port=32768 ansible_host=127.0.0.1 ansible_user=root ansible_password=screencast
+node2 ansible_port=32769 ansible_host=127.0.0.1 ansible_user=root ansible_password=screencast
