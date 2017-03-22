@@ -1,15 +1,15 @@
-- hosts: all
+- hosts: webservers
   vars:
-    to_do_list:
-        - develop
-        - test
-        - deploy
-        - take over world
     hello_messages:
         - "world"
-        - "wow"
-  tasks:
-    - name: print meaningless text
-      template:
-        dest: "~/hello.txt"
-        src: "templates/hello.txt.j2"
+        - "web"
+  roles:
+    - common
+
+- hosts: appservers
+  vars:
+    hello_messages:
+        - "world"
+        - "app"
+  roles:
+    - common
