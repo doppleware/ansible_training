@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+    - name: print meaningless text
+      blockinfile:
+        dest: "~/hello.txt"
+        content: "hello world"
+        create: yes
