@@ -11,5 +11,11 @@
     hello_messages:
         - "world"
         - "app"
+  pre_tasks:
+        - name: Wait for the vms to load
+          local_action: wait_for host={{ inventory_hostname }} port=22 state=started delay=0 timeout=600
+        - name: Gathering facts
+          setup:
   roles:
     - common
+    - Stouts.mongodb
